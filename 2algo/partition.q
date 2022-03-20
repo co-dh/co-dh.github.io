@@ -30,22 +30,12 @@ For a set like 1 2 3 4, a partition of it like (1 2; 3 4), and we call 1 2 a **p
     show 3 5 # Prt 1 2 3 4
 ~~~
 
-## Notes:
-This algorithm took me almost a day to deduct by myself.
-
-### A good notation is very important
-After I switched to the notition of [[1]], [[1 2]], everything becomes easier. A good notation should free you brain
-from processing unimportant information.
-
-### Use Pen And Paper first before coding
-Pen and paper gives you more freedom, as it can store information in 2D easily, and draw a graph easily.
-
-### Create term when needed
-
-### Here is what I produced with pen and paper
+## How it works
+* [Notation is important](../1meth/1notation.md)
+* [Use pen and paper to get the idea firt](../1meth/2_prefer_pen_paper.md)
+* Thought are not smooth before the term **part** was created.
 
 From partitions of 1 to 1 2
-
 <pre>
 | Partition     | conversion            | Resutl       |
 | ----------    | -----------           | -------      |
@@ -62,19 +52,4 @@ From partitions of 1 2 to 1 2 3
 | [[1 ^] [2  ]  ]   | append 3 to 1st part     | [[1 3] [2  ]     ]  |
 | [[1  ] [2 ^]  ]   | append 3 to 2nd part     | [[1  ] [2 3]     ]  |
 </pre>
-It's attempting to unify these 2 cases by append [] first, and then append 3 to each part.
 
-<pre>
-| Partition          | conversion               | Resutl             |
-| ----------         | -----------              | -------            |
-| [[1 2  ] [ ]]      | append []                |                    |
-| [[1 2 ^] [ ]]      | append 3 to 1st part     | [[1 2 3][ ]]       |
-| [[1 2  ] [^]]      | append 3 to 2nd part     | [[1 2  ][3]]       |
-| [[1  ] [2  ] [ ]]  | append [ ]               |                    |
-| [[1 ^] [2  ] [ ]]  | append 3 to 1st part     | [[1 3] [2  ] [ ] ] |
-| [[1  ] [2 ^] [ ]]  | append 3 to 2nd part     | [[1  ] [2 3] [ ] ] |
-| [[1  ] [2  ] [^]]  | append 3 to 3rd part     | [[1  ] [2  ] [3] ] |
-</pre>
-But we have to keep adding and removing the last empty part, which is not worthy it.
-
-## Algorithm from books.
