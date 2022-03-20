@@ -22,7 +22,7 @@ and there is no intersection of any Pi, Pj.
 ## Terminology
 For a set like 1 2 3 4, a partition of it like (1 2; 3 4), and we call 1 2 a **part** .
 
-## Test
+## Examples
 ~~~q
     0N! Prt enlist 1;
     0N! Prt 1 2;
@@ -34,11 +34,13 @@ For a set like 1 2 3 4, a partition of it like (1 2; 3 4), and we call 1 2 a **p
 This algorithm took me almost a day to deduct by myself.
 
 ### A good notation is very important
-k's notation for ,1: array of 1, and 1 2 for array of 2 is not very helpful. After I switched to [[1]], [[1 2]],
-everything is easier. A good notation should free you brain from processing unimportant information.
+After I switched to the notition of [[1]], [[1 2]], everything becomes easier. A good notation should free you brain
+from processing unimportant information.
 
 ### Use Pen And Paper first before coding
 Pen and paper gives you more freedom, as it can store information in 2D easily, and draw a graph easily.
+
+### Create term when needed
 
 ### Here is what I produced with pen and paper
 
