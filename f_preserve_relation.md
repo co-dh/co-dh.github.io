@@ -27,5 +27,5 @@ It's better to view f as a mapping/transformation, that certain properties(order
 transformation.
 
 Instead of simply define f as a mapping from Real to Real, we can define f as from a relation Rel to the same Rel. 
-So *f preserve Rel* is the same as *f: Rel->Rel*, same as *f is an endo function on Rel*, and same as *Rel close under f*.
+So **f preserve Rel** is the same as **f: Rel->Rel**, same as **f is an endo function on Rel**, and same as **Rel close under f**.
 
