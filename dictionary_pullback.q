@@ -8,7 +8,7 @@ leftAdjoint2:{[f] f} //another definition, since f: dictionary is implicitly map
 
 \
 # Pullback of a function f: A->B ( represented as dictionary in Q)
-The inverse of f in Q is group[f]: B->[A] that map b to it's preimage. However B has no order, but [B] can have order,
+The inverse of f in Q is group[f]: B->[A] that map b to it's preimage. However B has no order, but [B] can have order(⊆),
 so define **pullback[f] : [B]->[A] = a|-> a.group[f].map.concat** .
 
 In Q, map are implicitly for dictionary: d 1 2 = d[1],d[2]
