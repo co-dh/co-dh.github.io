@@ -1,2 +1,3 @@
-all: partition.q
-	qnote.q $< >partition.md 
+%.md: %.q
+	qnote.q $< >$@
+all: partition.md matrix_multiplication.md

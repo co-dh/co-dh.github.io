@@ -12,8 +12,8 @@ Or: a monoid that close in (X, ≤)
     |      |Bool1  | ≤       | false| ∨   |                      |
     |      |ℕ      | divisib | 0    | +   |                      |
     |      |3      | ≤       | 0    | min | 3 value boolean      |
-    |      |ℙ(S)   | ⊆       | S    | ∩   |                      |
     |      |Prop(N)| ⇒       | True | ∧   | All proposition on N |
+    | ℙ    |ℙ(S)   | ⊆       | S    | ∩   |                      |
     | Bool |0 1    | ≤       | true | ∧   |                      |
     | Cost |[0,∞]  | ≥       | 0    | +   | Cost                 |
 
