@@ -7,4 +7,4 @@ include:
   - matrix_multiplication.md.md
   - f_preserve_relation.md.md
 
-theme: jekyll-theme-slate
+theme: jekyll-theme-leap-day
