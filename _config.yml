@@ -1,0 +1,8 @@
+plugins:
+  - jekyll-relative-links
+relative_links:
+  enabled: true
+  collections: true
+include:
+  - matrix_multiplication.md.md
+  - f_preserve_relation.md.md
