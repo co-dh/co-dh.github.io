@@ -1,41 +1,29 @@
-## Welcome to GitHub Pages
+# Notes
 
 
-[mm](matrix_multiplication.md)
-[map](monoidal_monotone_map.md)
+[matrix_multiplication.md)](matrix_multiplication.md)
+[monoidal_monotone_map.md)](monoidal_monotone_map.md)
+[2_prefer_pen_paper.md)](2_prefer_pen_paper.md)
+[AWS_gravitonVsM1.md)](AWS_gravitonVsM1.md)
+[Lawvere_metric_space_as_cost_category.md)](Lawvere_metric_space_as_cost_category.md)
+[README.md)](README.md)
+[compositionality.md)](compositionality.md)
+[dictionary_pullback.md)](dictionary_pullback.md)
+[f_preserve_relation.md)](f_preserve_relation.md)
+[galois_left_right_bigger.md)](galois_left_right_bigger.md)
+[generative_effect.md)](generative_effect.md)
+[injective_function.md)](injective_function.md)
+[matrix_multiplication.md)](matrix_multiplication.md)
+[monoidal_monotone_map.md)](monoidal_monotone_map.md)
+[partition.md)](partition.md)
+[preorder_closure.md)](preorder_closure.md)
+[preorder_galios_connection.md)](preorder_galios_connection.md)
+[preserve_meet_is_right_adjoint.md)](preserve_meet_is_right_adjoint.md)
+[right_adjoint_preserve_meet.md)](right_adjoint_preserve_meet.md)
+[right_left_adjoint_bigger.md)](right_left_adjoint_bigger.md)
+[symmetric_monoidal_preorder.md)](symmetric_monoidal_preorder.md)
+[trinary_relation.md)](trinary_relation.md)
+[v-category.md)](v-category.md)
+[wiring_diagram_for_symmetrix_monoidal_preoders.md)](wiring_diagram_for_symmetrix_monoidal_preoders.md)
+[zettel.md)](zettel.md)
 
-You can use the [editor on GitHub](https://github.com/co-dh/notes/edit/main/README.md) to maintain and preview the content for your website in Markdown files.
-
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
-
-### Markdown
-
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
-
-```markdown
-Syntax highlighted code block
-
-# Header 1
-## Header 2
-### Header 3
-
-- Bulleted
-- List
-
-1. Numbered
-2. List
-
-**Bold** and _Italic_ and `Code` text
-
-[Link](url) and ![Image](src)
-```
-
-For more details see [Basic writing and formatting syntax](https://docs.github.com/en/github/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax).
-
-### Jekyll Themes
-
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/co-dh/notes/settings/pages). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
-
-### Support or Contact
-
-Having trouble with Pages? Check out our [documentation](https://docs.github.com/categories/github-pages-basics/) or [contact support](https://support.github.com/contact) and we’ll help you sort it out.
