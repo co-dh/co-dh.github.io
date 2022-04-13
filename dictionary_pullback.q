@@ -1,5 +1,3 @@
-/pull back of function f
-
 inverse:{ value[x]!key x } /inverse a dictionary's key and value
 pullback: {[f; x] raze group[f]x }
 rightAdjoint:{[f; x] where all x in/:\: group f}

@@ -1,6 +1,3 @@
-~~~q
-mm: {x {sum x*y}/:\: flip y}
-~~~
 # Matrix multiplication in Q
 
 Give matrix x and y
@@ -27,4 +24,9 @@ and you do this for every row i of x and column j of y,
 ~~~q
     0N!x {sum x*y}/:\: flip y;
 ,5 0 4
-~~~ 
+~~~
+
+## Code loaded
+~~~q
+mm: {x {sum x*y}/:\: flip y}
+~~~

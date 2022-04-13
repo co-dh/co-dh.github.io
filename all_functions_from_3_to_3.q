@@ -1,5 +1,6 @@
-/
-# How many functions are there from 0 1 2 to 0 1 2?  3 exp 3 = 27
+\
+# How many functions are there from 0 1 2 to 0 1 2?
+3 exp 3 = 27
 Each function can be reprented as an array of 3. Function composition can be represented as array application.
 
 ~~~q
@@ -11,8 +12,8 @@ Each function can be reprented as an array of 3. Function composition can be rep
 ~~~q
     x: til 3
     rc: {raze x,/:\:y}
-    count fs
     show fs: rc[x;]rc[x;x]
+    count fs
 ~~~
 
 ## composition matrix

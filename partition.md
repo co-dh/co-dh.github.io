@@ -1,12 +1,3 @@
-~~~q
-/x:a, y: [[a]]. append x to y[0], then to y[1], ..., raze the result.
-appendEach:{ @[y; ;, ;x]each til count y}
-Prt:{ /[a] -> [[[a]]]. return all partitions of array x.
-    ; if[1=count x; : enlist enlist x]
-    ; smaller: .z.s -1 _ x
-    ; (smaller,\:enlist -1#x), raze appendEach[last x]each smaller
-    }
-~~~
 # Enumerate all partitions of an array
 
 ## Definition:
@@ -59,3 +50,13 @@ From partitions of 1 2 to 1 2 3
 | [[1  ] [2 ^]  ]   | append 3 to 2nd part     | [[1  ] [2 3]     ]  |
 </pre>
 
+## Code loaded
+~~~q
+/x:a, y: [[a]]. append x to y[0], then to y[1], ..., raze the result.
+appendEach:{ @[y; ;, ;x]each til count y}
+Prt:{ /[a] -> [[[a]]]. return all partitions of array x.
+    ; if[1=count x; : enlist enlist x]
+    ; smaller: .z.s -1 _ x
+    ; (smaller,\:enlist -1#x), raze appendEach[last x]each smaller
+    }
+~~~

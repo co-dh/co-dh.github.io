@@ -1,3 +1,4 @@
+# What does a function preserve a relation means?
 Given f: R->R, f is
 
 | Prop               | Definition             | Relation Definition                | indicator function of domain |

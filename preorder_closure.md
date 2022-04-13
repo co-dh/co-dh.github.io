@@ -1,1 +1,2 @@
-# closure: x.r.l ≥ x, c: r l is the closure, and c c = c (idempotent) 
+# Preorder Closure c = r l is a closure, and c c = c (idempotent)
+r -| l, that is r is the left adjoint, r is the right.

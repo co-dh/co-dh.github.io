@@ -19,4 +19,5 @@ You take a row x[i] from x, a column y[;j] from y, multiply them elementwisely, 
 and you do this for every row i of x and column j of y,
 ~~~q
     0N!x {sum x*y}/:\: flip y;
-~~~ 
+~~~
+
