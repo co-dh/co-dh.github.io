@@ -5,17 +5,17 @@ Or: a monoid that close in (X, ≤)
 
 ##Examples
 
-    | Name | SET   | Order   | I    | ⊗   |                      |
-    |------| ------| --------| -----| ----| ---------------------|
-    |      |ℝ      | ≤       | 0    | +   |                      |
-    |      |ℕ      | ≤       | 0    | *   |                      |
-    |      |Bool1  | ≤       | false| ∨   |                      |
-    |      |ℕ      | divisib | 0    | +   |                      |
-    |      |3      | ≤       | 0    | min | 3 value boolean      |
-    |      |Prop(N)| ⇒       | True | ∧   | All proposition on N |
-    | ℙ    |ℙ(S)   | ⊆       | S    | ∩   |                      |
-    | Bool |0 1    | ≤       | true | ∧   |                      |
-    | Cost |[0,∞]  | ≥       | 0    | +   | Cost                 |
+    | Name | SET   | Order   | Join    | I    | ⊗   |                         | closed? |
+    |------| ------| --------|------   | -----| ----| ---------------------   | --------|
+    |      |ℝ      | ≤       | max     | 0    | +   |                         | Y       |
+    |      |ℕ      | ≤       | max     | 1    | *   |                         | Y       | 
+    |      |Bool1  | ≤       | max     | false| ∨   |                         | Y?      |
+    |      |ℕ      | divisib | LCM[^1] | 1    | *   |                         |         |
+    |      |3      | ≤       |         | 2    | min | 3 value boolean         |         |
+    |      |Prop(N)| ⇒       |         | True | ∧   | All proposition on N    |         |
+    | ℙ    |ℙ(S)   | ⊆       |         | S    | ∩   |                         |         |
+    | Bool |0 1    | ≤       |         | true | ∧   |                         | Y       |
+    | Cost |[0,∞]  | ≥       |         | 0    | +   | Cost                    |         |
 
 ## Opposite of monoidal preorder
 By switch the order, we get another SMP, because ⊗ preserve the opposite order too.
@@ -39,3 +39,5 @@ Well, function decomposition are not a preorder, as the permutation functions fo
     X ≤ I
 # Copy Axiom(to copy a file)
     x ≤ x+ x ∀ x ∈ X
+
+[^1]: Least Common Multiple
