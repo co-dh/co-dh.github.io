@@ -1,21 +1,22 @@
 # right adjoint(l) preserve meet.
-If r don't preserve meet, let's save 3 meet 4 = 2, but 3.l meet 4.l = m > 2.r
+If r don't preserve meet, let's save a meet b = c, but a.l meet b.l = m > c.l
 
 ```q
-    3.l  4.l |  3   4
+    a.l  b.l |  a   b
              |
-      m      |    2
-      2.l    |    m.r
-
-    for any m <= 3.l and m <=4.l
+      m      |    c
+      c.l    |    m.r
+    m ≤ a.l and m ≤b.l
     {definition of galios connetion} 
-    m.r <=3 and m.r <=4
-    {2 = 3 meet 4}
-    m.r <= 2
+    m.r ≤a and m.r ≤b
+    {c = a meet b}
+    m.r ≤ c
     {galios}
-    m <= 2.l
+    m ≤ c.l
     {meet definition}
-    2.l is meet
+    c.l is meet
 ```
 
 see [galios](galois_left_right_bigger.md)
+see [right below](right_adjoint_is_the_best_approximation_from_below.md)
+see [right adjoint of pullback](dictionary_pullback.md)
