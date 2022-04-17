@@ -14,7 +14,9 @@ Does S has a join j? Even yes, j may be not in the range of L.
     j               j.L
     | \              |  \ 
     a  b             a.L  b.L
-    
+
+Here I use [dot as application](dot_as_application.md), and [juctaposition as composition](junctaposition_as_composition.md).
+
 but the preimage of S can have a join j, and this is the x we are looking for.
 So:
     y ≥ (a.L, b.L) -inv[f]-> (a,b) -join-> j 

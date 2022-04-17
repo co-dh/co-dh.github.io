@@ -28,7 +28,7 @@ p: pullback[f]
     p[1#`a] ∩ p`a`b = 0 1 ∩ 0 1 2 = 0 1 = p 1#`a
 
 
-# pullback's left adjoint:
+## pullback's left adjoint:
     
 The left adjoint function L has the type [A]->[B]. Given x: 0 2 of type [A],
 [0] is a subset of 0 1, which map to a by the p: pullback of f.
@@ -91,7 +91,7 @@ Here is how we implement it in Q
 But this do not like approach from above to me, it looks like approach from below ( right adjoint) to me.
 
 
-# pullback preserve join, so it's a left adoint, and it has a left adjoint
+## pullback preserve join, so it's a left adoint, and it has a left adjoint
     
     (1#`a)  ∪  `a`b =   1#`a
     p[1#`a] ∪ p`a`b = p 1#`a
