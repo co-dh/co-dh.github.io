@@ -1,5 +1,7 @@
-# Calculating Right Adjoint in Preorder from Left Adjoint 
+# Calculating Right Adjoint in Preorder from Left Adjoint
+
     L x ≤ y ↔ x ≤ R y
+    
 Given y, how to get x?
 
 But any Preorder (Q, ≤), there be 0, 2, or more elements( S=(a.L, b.L)) below smaller than x and also in the image of L. 
@@ -26,7 +28,11 @@ So:
 It's actually used implicitly with j = join(a,b), and j.L is is also the join of a.L and b.L
 
 # Calculating Left Adjoint from R
-Give double: 1 ? 2  -> 2 3 4, how to find the inverse of 3?
+Given function double: 1 ? 2  -> 2 3 4, how to find the inverse of 3?
 We can find all elements that are larger than 3, and in range of double, find it's inverse, then get meet of the result.
-    3 ≤ 4 6 8 ... -[half]-> 2 3 4 ... -[meet]-> 4
-    L = ≤ inv[R] meet
+
+    3 ≤ 4 6 8 ... -[half]-> 2 3 4 ... -[meet]-> 2
+    
+thus
+
+##    L = ≤ inv[R] meet
