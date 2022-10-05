@@ -3,7 +3,7 @@ transitive: { x ~(bmm[x;]/) 0N!x } /WRONG
 transitive: { all raze bmm[x;x] <= x}
 
 \
-# Define transitive in Boolean Matrix (WRONG)
+# Define transitive in Boolean Matrix
 A boolean Matrix M represented preorder is transitive if M * M * M ... = M
 
 ## Examples
