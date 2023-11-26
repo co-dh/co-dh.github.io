@@ -1,5 +1,6 @@
 
-### From :convert matrix to sparse
+### From
+convert matrix to sparse
 ~~~q
     x: (0 1.1 0; 2.1 0 3.1)Code           Result                      Comment                                 
     -----------------------------------------------------------------------------------
@@ -11,7 +12,8 @@
     
 ~~~
 
-### fdd :apply function f on 2 dictionaries
+### fdd
+apply function f on 2 dictionaries
 ~~~q
     x:(+); y:1 2!2 4; z:1 3!3 9Code              Result Comment                                          
     --------------------------------------------------------------------------
@@ -20,25 +22,13 @@
     
 ~~~
 
-### ddv :convert sparse matrix to (row; col!val) format
+### ddv
+convert sparse matrix to (row; col!val) format
 ~~~q
     x:(0 1 1;2 3 4; `a`b`c)Code         Result                          Comment                 
     ---------------------------------------------------------------------
     =:x 0      0 1!(,0;1 2)                  group by row          
     x[1 2]@\\: (0 1!(,2;3 4);0 1!(,`a;`b`c)) get col and val by row
     (!'/)      0 1!((,2)!,`a;3 4!`b`c)       change to col!val     
-    
-~~~
-
-### smm :Multiply sparse matrix
-~~~q
-    x:From x0:(1 0 0f;1 0 1f); y: From y0: (1 0 0 0f;0 0 2 1f;0 0 0 0f); r:x0$y0Code             Result                                                                  Comment                                    
-    ------------------------------------------------------------------------------------------------------------------------------------
-    Trans y        (0 2 3;0 1 1;1 2 1f)                                                  transpose sparse matrix y                
-    ddv            0 2 3!((,0)!,1f;(,1)!,2f;(,1)!,1f)                                    convert to dict->dict->val of row!col!val
-    ddv[x]dXd/:\\: 0 1!(0 2 3!(,1f;`float$();`float$());0 2 3!(,1f;`float$();`float$())) outer product * of dictionary            
-    +/''           0 1!(0 2 3!1 0 0f;0 2 3!1 0 0f)                                       sum vals                                 
-    unddv@         (0 0 0 1 1 1;0 2 3 0 2 3;1 0 0 1 0 0f)                                from ddv to sparse matrix                
-    del0           (0 1;0 0;1 1f)                                                        remove if value is 0                     
     
 ~~~
