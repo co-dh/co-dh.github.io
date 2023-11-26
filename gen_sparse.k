@@ -1,6 +1,5 @@
-fdd:{k:.q.inter[!y;!z];x[y k;z k]}; dXd:fdd[*];    ftt:{(y 0;z 0;x dXd[y 1;z 1])};    tXt:ftt[+/];  Trans:{x 1 0 2} 
-Rcdv:{(!d),',:' .:d:(!/+:)'=:(+:x 1 2)!x 0};    smm:{flip raze Rcdv[From x] tXt/:\:Rcdv[Trans From y]}
-From:{(+:idx),,x ./:idx:,/(!#:x)(,/:)'&:'~0=x}
+#!/usr/bin/env rq
+dXd:fdd[*];   ftt:{(y 0;z 0;x dXd[y 1;z 1])};    tXt:ftt[+/]; Trans:{x 1 0 2} 
 \l explain.k
 explain[`From; "convert matrix to sparse";  "x: (0 1.1 0; 2.1 0 3.1)"]"
     (+:idx),,                   /tuple of (row ; col; val)
@@ -28,10 +27,9 @@ explain[`Smm; "Multiply sparse matrix"; "x:From x0:(1 0 0f;1 0 1f); y: From y0: 
     Rcdv            /convert to ((row; col!val))
     Trans           /transpose y
     y               /sparse matrix represented as (row; col; val)" ;
-\\
 
+
+\\
 /
 tree diameter problem.
-
-    
     assert From[r]~ /verify the result against normal matrix multiplication
