@@ -1,6 +1,6 @@
 .PHONY: idx
 %.md: %.q
-	qnote.q $< >$@
+	qnote2.q $< >$@
 
 qfile := $(wildcard *.q)
 md := $(qfile:%.q=%.md)
