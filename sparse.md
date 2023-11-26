@@ -1,60 +1,48 @@
 
 ### From :convert matrix to sparse
-
 ~~~q
-	x: (0 1.1 0; 2.1 0 3.1)
-                                    &:'~0=x /column of non zero element at each row
-	(,1;0 2)
-                       (!#:x)(,/:)' &:'~0=x /add row index
-	(,0 1;(1 0;1 2))
-                    ,/ (!#:x)(,/:)' &:'~0=x /flat
-	(0 1;1 0;1 2)
-          x ./:idx: ,/ (!#:x)(,/:)' &:'~0=x /get the value
-	1.1 2.1 3.1
-(+:idx),, x ./:idx: ,/ (!#:x)(,/:)' &:'~0=x /tuple of (row ; col; val)
-	(0 1 1;1 0 2;1.1 2.1 3.1)
+x: (0 1.1 0; 2.1 0 3.1)
+Code           Result                      Comment                                 
+-----------------------------------------------------------------------------------
+&:'~0=x      (,1;0 2)                  column of non zero element at each row
+(!#:x)(,/:)' (,0 1;(1 0;1 2))          add row index                         
+,/           (0 1;1 0;1 2)             flat                                  
+x ./:idx:    1.1 2.1 3.1               get the value                         
+(+:idx),,    (0 1 1;1 0 2;1.1 2.1 3.1) tuple of (row ; col; val)             
 
 ~~~
 
 ### fdd :apply function f on 2 dictionaries
-
 ~~~q
-	x:(+); y:1 2!2 4; z:1 3!3 9
-            .q.inter[!y;!z] /find common key of dictionary y an z
-	,1
-x[y k;]z k: .q.inter[!y;!z] /apply binary function x on value of common keys
-	,5
+x:(+); y:1 2!2 4; z:1 3!3 9
+Code              Result Comment                                          
+--------------------------------------------------------------------------
+.q.inter[!y;!z] ,1   find common key of dictionary y an z           
+x[y k;]z k:     ,5   apply binary function x on value of common keys
 
 ~~~
 
 ### ddv :convert sparse matrix to (row; col!val) format
-
 ~~~q
-	x:(0 1 1;2 3 4; `a`b`c)
-                =:x 0 /group by row
-	0 1!(,0;1 2)
-      x[1 2]@\: =:x 0 /get col and val by row
-	(0 1!(,2;3 4);0 1!(,`a;`b`c))
-(!'/) x[1 2]@\: =:x 0 /change to col!val
-	0 1!((,2)!,`a;3 4!`b`c)
+x:(0 1 1;2 3 4; `a`b`c)
+Code         Result                          Comment                 
+---------------------------------------------------------------------
+=:x 0      0 1!(,0;1 2)                  group by row          
+x[1 2]@\\: (0 1!(,2;3 4);0 1!(,`a;`b`c)) get col and val by row
+(!'/)      0 1!((,2)!,`a;3 4!`b`c)       change to col!val     
 
 ~~~
 
 ### smm :Multiply sparse matrix
-
 ~~~q
-	x:From x0:(1 0 0f;1 0 1f); y: From y0: (1 0 0 0f;0 0 2 1f;0 0 0 0f); r:x0$y0
-                                   Trans y /transpose sparse matrix y
-	(0 2 3;0 1 1;1 2 1f)
-                               ddv Trans y /convert to dict->dict->val of row!col!val
-	0 2 3!((,0)!,1f;(,1)!,2f;(,1)!,1f)
-                 ddv[x]dXd/:\: ddv Trans y /outer product * of dictionary
-	0 1!(0 2 3!(,1f;`float$();`float$());0 2 3!(,1f;`float$();`float$()))
-            +/'' ddv[x]dXd/:\: ddv Trans y /sum vals
-	0 1!(0 2 3!1 0 0f;0 2 3!1 0 0f)
-     unddv@ +/'' ddv[x]dXd/:\: ddv Trans y /from ddv to sparse matrix
-	(0 0 0 1 1 1;0 2 3 0 2 3;1 0 0 1 0 0f)
-del0 unddv@ +/'' ddv[x]dXd/:\: ddv Trans y /remove if value is 0
-	(0 1;0 0;1 1f)
+x:From x0:(1 0 0f;1 0 1f); y: From y0: (1 0 0 0f;0 0 2 1f;0 0 0 0f); r:x0$y0
+Code             Result                                                                  Comment                                    
+------------------------------------------------------------------------------------------------------------------------------------
+Trans y        (0 2 3;0 1 1;1 2 1f)                                                  transpose sparse matrix y                
+ddv            0 2 3!((,0)!,1f;(,1)!,2f;(,1)!,1f)                                    convert to dict->dict->val of row!col!val
+ddv[x]dXd/:\\: 0 1!(0 2 3!(,1f;`float$();`float$());0 2 3!(,1f;`float$();`float$())) outer product * of dictionary            
++/''           0 1!(0 2 3!1 0 0f;0 2 3!1 0 0f)                                       sum vals                                 
+unddv@         (0 0 0 1 1 1;0 2 3 0 2 3;1 0 0 1 0 0f)                                from ddv to sparse matrix                
+del0           (0 1;0 0;1 1f)                                                        remove if value is 0                     
 
 ~~~
