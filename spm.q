@@ -11,7 +11,9 @@ a+'b /null propagate
 .Q.s1 a,'b
 
 k)From:{2!+:`r`c`v!(+:idx),,x ./:idx:,/(!#:x)(,/:)'&:'~0=x}
-x:From x0:(1 5 0f;2 0 3f); y: From y0: (4 0 0 0f;6 0 0 0f;0 0 0 0f); 
+x:From x0:(1 5 0f;2 0 3f); y: From y0: (4 0 0 0f;6 0 0 0f;0 0 0 0f);
+smm[x;y]~From x0$y0
+
 Trans:{select v by r:c, c:r from x}
 /support all binary operation.
 /how to do matrix multiplication. cross product of dictonary when key is the same.
@@ -27,5 +29,4 @@ ck: key[x0] inter key[y0]
 {([]r:key[x][;0]; c:key[x][;1]; v:value x)}sum raze {flatDict'[key x;value x]}each value (ck#x0)(*/:\:)'ck#y0
 
 ddv y
-
 
