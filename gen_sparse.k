@@ -7,13 +7,13 @@ unk: {(!x),/:'. x}
 ddv: {(!'/) x[1 2]@\:=:x 0} /convert sparse matrix to row!col!val. like exec x[1]!x 2 by x 0 from x
 unddv:{+:,/unk@unk'x} 
 del0:  {x@\:&:~0=x[2]} /delete from sparse matrix where value (x[2]) is 0
-smm:{del0 unddv@+/''ddv[x](+/dXd)/:\:ddv Trans y}
+smm:{del0 unddv@+/''ddv[x]dXd/:\:ddv Trans y}
 
 \l explain.k
     
 /
 
-/   
+/
 x: (,0)!,(2 3!1 2)
 y: (,1)!,(1 3!10 20)
 x dXd/:\:y

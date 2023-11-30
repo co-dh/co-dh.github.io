@@ -1,4 +1,4 @@
-From
+From:{
     convert matrix to sparse 
     x: (0 1.1 0; 2.1 0 3.1)
     (+:idx),,       /tuple of (row ; col; val)
@@ -6,13 +6,27 @@ From
     ,/              /flat
     (!#:x)(,/:)'    /add row index
     &:'~0=x         /column of non zero element at each row"]
+    }
 
-fdd
-    apply function f on 2 dictionaries
-    x:(+); y:1 2!2 4; z:1 3!3 9 
-    x[y k;]z k:        /apply binary function x on value of common keys
-    .q.inter[!y;!z]    /find common key of dictionary y an z
+Trans:{
+    Transpose sparse matrix represent as (row; col; val)
+    x: (0 1.1 0; 2.1 0 3.1)
+    x[1 0 2 ] /to (col; row; val)
+    }
+    
+fdd:{[f;g;d;e]
+    map function g on 2 dictionaries, then reduce with f
+    f:(+); g:(*); d:1 2!2 4; e:1 3!3 9
+    f/                 /reduce with f
+    g[d k;]e k:        /apply binary function x on value of common keys
+    .q.inter[!d;!e]    /find common key of dictionary y an z
+    }
 
+dXd:{fdd[+;*; x y]
+    f:(+); g:(*); d:1 2!2 4; e:1 3!3 9
+    
+dXd
+    dictionary multiply dictionary
 ddv
     convert sparse matrix to (row; col!val) format
     x:(0 1 1;2 3 4; `a`b`c)

@@ -14,12 +14,13 @@ x: 0:: `$":",fn:.z.x 0
 kfn: `$":",$`/:(*:`\:`$fn),`k
 extract:{,[;"}"]x[0],":{", " "/:.q.trim'@[;0]'" /"\:'3_x }
 kfn 0: extract'.:x@=:+\~:" "=x[;0]
+."\\l ",1_$kfn
 
 
-From:{(+:idx),, x ./:idx: ,/ (!#:x)(,/:)' &:'~0=x }
-fdd:{[f;g;d;e]f/g[d k;]e k: .q.inter[!d;!e]}
-ddv:{(!'/) x[1 2]@\: =:x 0}
-Trans:{x 1 0 2}
+/From:{(+:idx),, x ./:idx: ,/ (!#:x)(,/:)' &:'~0=x }
+/fdd:{[f;g;d;e]f/g[d k;]e k: .q.inter[!d;!e]}
+/ddv:{(!'/) x[1 2]@\: =:x 0}
+/Trans:{x 1 0 2}
 dXd:fdd[+;*];
 
 unk: {(!x),/:'. x}
