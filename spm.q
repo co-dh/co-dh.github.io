@@ -30,3 +30,10 @@ ck: key[x0] inter key[y0]
 
 ddv y
 
+/ another version that do composition on the triple directly without convert to dictionary of dictonary
+/ compute 1 row of x to full y each time.
+/ It should be fast because y are accessed continuously, but need test.
+/ each row of x can be a dictonary of col c to value v.
+/ c is used to select row from y, y[c], let's put y in a table first
+/ 
+

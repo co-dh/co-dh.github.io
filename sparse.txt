@@ -22,10 +22,9 @@ ddv
 
 smm
     Multiply sparse matrix
-    x:From x0:(1 0 0f;1 0 1f); y: From y0: (1 0 0 0f;0 0 2 1f;0 0 0 0f); r:x0$y0
-    del0            /remove if value is 0
+    x:From x0:(5 0 0f;6 0 7f); y: From y0: (8 0 0 0f;0 0 9 7f;0 0 0 0f); r:x0$y0
     unddv@          /from ddv to sparse matrix
-    +/''            /sum vals
-    ddv[x]dXd/:\:  /outer product * of dictionary
+    del0'            /remove (k,v) from dictionary if v is 0
+    ddv[x](dXd/:)\:  /outer product * of dictionary
     ddv             /convert to dict->dict->val of row!col!val
     Trans y         /transpose sparse matrix y"];
